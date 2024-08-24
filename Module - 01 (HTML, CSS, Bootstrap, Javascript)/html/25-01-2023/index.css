@@ -1,0 +1,39 @@
+.bgBlack {
+    color: aqua;
+    background-color: black;
+}
+
+.bgRed {
+    color: white;
+    background-color: red;
+}
+
+html,body {
+    height: 100%;
+}
+
+
+html {
+    position: relative;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+}
+
+.item-center {
+    text-align: center;
+}
+
+#div1 {
+    color: green;
+}
+
+.text-red {
+    color: red;
+}
+
+.text-yellow {
+    color: yellow;
+}

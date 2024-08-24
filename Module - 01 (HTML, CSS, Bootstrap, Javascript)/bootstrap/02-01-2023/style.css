@@ -1,0 +1,9 @@
+.bg-row {
+    background-color: lightgreen;
+}
+
+.bg-col {
+    border: 2px solid black;
+    color: white;
+    height: 50px;
+}

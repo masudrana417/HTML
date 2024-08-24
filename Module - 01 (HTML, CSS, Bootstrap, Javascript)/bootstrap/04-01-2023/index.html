@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bootstrap Form</title>
+    <meta charset="UTF-8" lang="en-US" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="../bootstrap-5.0.2-dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="../bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <h4>Vertical Form</h4>
+      <div class="row">
+        <div class="col">
+          <form role="form">
+            <label>Username</label>
+            <input type="text" class="form-control" name="username" />
+            <label>Password</label>
+            <input type="text" class="form-control" name="password" />
+          </form>
+        </div>
+      </div>
+
+      <h4>Inline Form</h4>
+      <div class="row">
+        <div class="col">
+          <form role="form">
+            <div class="row">
+              <div class="col-4">
+                <input
+                  type="text"
+                  placeholder="Username"
+                  class="form-control form-control-sm"
+                  name="username"
+                />
+              </div>
+              <div class="col-4">
+                <input
+                  type="text"
+                  placeholder="Password"
+                  class="form-control"
+                  name="password"
+                />
+              </div>
+              <div class="col-4">
+                <input
+                  type="text"
+                  placeholder="User ID"
+                  class="form-control form-control-lg"
+                  name="userId"
+                />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <h4>Horizontal Form</h4>
+      <div class="row">
+        <div class="col">
+          <form role="form">
+            <div class="row mb-3">
+              <label class="col-2">Username</label>
+              <div class="col-10">
+                <input type="text" class="form-control" name="username" />
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label class="col-2">Password</label>
+              <div class="col-10">
+                <input type="text" class="form-control" name="password" />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <h4>Input practice</h4>
+      <div class="row">
+        <div class="col">
+          <form role="form">
+            <div class="row mb-3">
+              <label class="col-2">Subject</label>
+              <div class="col-4">
+                <select class="form-select" name="sub" disabled>
+                  <option value="op1">Option 1</option>
+                  <option value="op2">Option 2</option>
+                  <option value="op3">Option 3</option>
+                  <option value="op4">Option 4</option>
+                </select>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label class="col-2">Checkbox</label>
+              <div class="col-4">
+                <div class="mb-1">
+                  <input
+                    id="sub1"
+                    type="checkbox"
+                    class="form-check-input me-2"
+                    disabled
+                  />
+                  <label for="sub1">Subject 1</label>
+                </div>
+                <div class="mb-1">
+                  <input
+                    id="sub2"
+                    type="checkbox"
+                    class="form-check-input me-2"
+                  />
+                  <label for="sub2">Subject 1</label>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label class="col-2">Radio</label>
+              <div class="col-4">
+                <div class="mb-1">
+                  <input
+                    id="sub3"
+                    type="radio"
+                    class="form-check-input me-2"
+                    name="subject"
+                  />
+                  <label for="sub3">Subject 1</label>
+                </div>
+                <div class="mb-1">
+                  <input
+                    id="sub4"
+                    type="radio"
+                    class="form-check-input me-2"
+                    name="subject"
+                  />
+                  <label for="sub4">Subject 1</label>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <h4>Button practice</h4>
+      <div class="row mb-5">
+        <div class="col-2">Design</div>
+        <div class="col-10">
+          <button class="btn">Default</button>
+          <button class="btn btn-primary">Primary</button>
+          <button class="btn btn-info">Info</button>
+          <button class="btn btn-success">Success</button>
+          <button class="btn btn-danger">Danger</button>
+          <button class="btn btn-warning">Warning</button>
+          <button class="btn btn-link">Link</button>
+        </div>
+      </div>
+      <div class="row mb-5">
+        <div class="col-2">Size</div>
+        <div class="col-4">
+          <button class="btn btn-lg btn-primary">Large</button>
+          <button class="btn btn-sm btn-primary">Small</button>
+        </div>
+        <div class="col-6">
+          <div class="d-grid">
+            <button class="btn btn-block btn-primary">Block</button>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-5">
+        <div class="col-2">State</div>
+        <div class="col-4">
+          <button class="btn btn-primary" disabled>Disabled</button>
+          <button class="btn btn-primary active">Small</button>
+        </div>
+      </div>
+
+      <h4>Image practice</h4>
+      <div class="row mb-5">
+        <div class="col-4">
+          <img class="img-fluid" src="image/image.webp" title="Responsive"/>
+        </div>
+        <div class="col-4">
+          <img class="img-thumbnail" src="image/image.webp" title="Thumbnail"/>
+        </div>
+      </div>
+      <div>
+          <img class="float-start" src="image/image.webp" title="Align left" height="100" width="100"/>
+          <img class="float-end" src="image/image.webp" title="Thumbnail" height="100" width="100"/>
+      </div>
+    </div>
+    <br />
+    <br />
+    <br />
+  </body>
+</html>

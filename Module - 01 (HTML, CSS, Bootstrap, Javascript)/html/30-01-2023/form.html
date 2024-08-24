@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form Practice</title>
+    <meta charset="UTF-8" lang="en-US" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <h3>Input practice</h3>
+    <div>
+      <form action="form.db" method="post">
+        <label for="studentName">Enter Name</label><br />
+        <input type="text" id="studentName" name="studentName" /><br />
+
+        <label for="studentId">Enter ID</label><br />
+        <input type="text" id="studentId" name="studentId" /><br />
+
+        <label>Enter Gender</label><br />
+        <label><input type="radio" name="gender" value="Male" /> Male </label><br />
+        <label><input type="radio" name="gender" value="Female" /> Female </label><br />
+
+        <label>Enter Educational Qualification</label><br />
+
+        <input type="checkbox" id="edu-ssc" name="education" value="ssc" />
+        <label for="edu-ssc">SSC</label><br />
+
+        <input type="checkbox" id="edu-hsc" name="education" value="hsc" /> 
+        <label for="edu-hsc">HSC</label><br />
+
+        <input type="checkbox" id="edu-hns" name="education" value="hns" /> 
+        <label for="edu-hns">Hns</label><br />
+        
+        <input type="checkbox" id="edu-ms" name="education" value="ms" /> 
+        <label for="edu-ms">Ms</label><br />
+
+        <label > Subject </label> <br/>
+        <select name="subject">
+          <option value="java">Java</option>
+          <option value="nt">NT</option>
+          <option value="gave">GAVE</option>
+        </select>
+        <br/>
+        
+        <label>Enter Career objective</label><br />
+        <textarea name="career-obj"></textarea><br/>
+
+
+        <br />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+  </body>
+</html>

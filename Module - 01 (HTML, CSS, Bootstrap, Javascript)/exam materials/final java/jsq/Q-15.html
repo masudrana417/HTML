@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+
+<title>Question 15</title>
+</head>
+
+<body>
+	
+	<h3>Discount calculation</h3>
+	
+	<input type="text" id="num" placeholder="The amount">&nbsp;<button onClick="dis()">Click</button>
+	<br><br>
+	<input type="text" id="dca" placeholder="Discount amount">
+	&nbsp;
+	<input type="text" id="dcv" placeholder="Discounted value">
+	<br><br>
+	
+	<script>
+		
+		function dis(){
+			var num= document.getElementById('num').value;
+			var n= parseInt(num);
+			var dv;
+			if (n>=100 && n<=300) {
+				dv=n*0.9;
+				document.getElementById('dca').value = "10%";
+			}
+			else if (n>=301 && n<=700) {
+				dv=n*0.85;
+				document.getElementById('dca').value = "15%";
+			}
+			else if (n>=701 && n<=1000) {
+				dv=n*0.8;
+				document.getElementById('dca').value = "20%";
+			}
+			else if (n>1000) {
+				dv=n*0.75;
+				document.getElementById('dca').value = "25%";
+			}
+			else {
+				dv=n;
+				document.getElementById('dca').value = "0%";
+			}
+			document.getElementById('dcv').value=dv;
+		}
+	</script>
+</body>
+</html>

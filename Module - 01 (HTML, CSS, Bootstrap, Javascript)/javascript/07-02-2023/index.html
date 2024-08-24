@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+  </head>
+  <body>
+    <div id="div1">Test text</div>
+
+
+    <script>
+
+      function giveAnAlert() {
+        /*
+        alert("Element clicked");
+        document.getElementById("div1").innerHTML = prompt("Enter div text", "");
+        */
+
+        document.getElementById("div1").style.background = 'red';
+      }
+
+      // document.getElementById("div1").innerHTML = "Test 1 text";
+      document.getElementById("div1").onclick = giveAnAlert;
+    </script>
+
+  </body>
+</html>

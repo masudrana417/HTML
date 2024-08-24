@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Question 3</title>
+</head>
+
+<body>
+    <!-- <h1>Find the largest number and smallest number from a set of numbers</h1> -->
+    <h3 id="demo"></h3>
+
+    <script>
+        function mxmn() {
+            var max = 0;
+            var min = Number.MAX_SAFE_INTEGER;
+            var n = prompt("Please enter your numbers");
+            var stringArray = n.split(',');
+            for (i = 0; i < stringArray.length; i++) {
+                let num = parseInt(stringArray[i]);
+                if (max < num) {     // For finding the maximum number
+                    max = num;
+                }
+                if (min > num) { // For finding the minimum number
+                    min = num;
+                }
+            }
+            document.getElementById('demo').innerHTML = "The maximum number is " + max + " and the minimum number is " + min;
+        }
+        mxmn();
+    </script>
+
+</body>
+
+</html>

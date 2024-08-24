@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title>Question 6</title>
+</head>
+
+<body>
+
+	<div id="t"></div>
+
+	<script>
+		var n = prompt("Please insert less than 16 digits");
+		var text = "";
+		for (i = 0; i <= 10; i++) {
+			text += n + " x " + i + " = " + (n * i) + "<br>";
+		}
+		document.getElementById('t').innerHTML = text;
+	</script>
+</body>
+
+</html>

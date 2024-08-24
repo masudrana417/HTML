@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <script>
+    function validate() {
+      //Text input
+      let username = document.getElementById("username").value;
+      if (!username) {
+        showMessage("usernameLbl");
+        return false;
+      } else {
+        hideMessage("usernameLbl");
+      }
+
+      //Password input
+      let password = document.getElementById("password").value;
+      if (!password || password.length < 8 || password.length > 16) {
+        showMessage("passwordLbl");
+        return false;
+      } else {
+        hideMessage("passwordLbl");
+      }
+
+      //Textarea input
+      let description = document.getElementById("description").value;
+      if (!description) {
+        showMessage("descriptionLbl");
+        return false;
+      } else {
+        hideMessage("descriptionLbl");
+      }
+
+      //Checkbox input
+      let subject = document.querySelector("input[name='subject']:checked");
+      if (!subject) {
+        showMessage("subjectLbl");
+        return false;
+      } else {
+        hideMessage("subjectLbl");
+      }
+
+      //Radio input
+      let education = document.querySelectorAll("input[name='education']:checked");
+      if (education.length < 2 || education.length > 3) {
+        showMessage("educationLbl");
+        return false;
+      } else {
+        hideMessage("educationLbl");
+      }
+
+      //Select input
+      let country = document.querySelector("#country").value;
+      if (!country) {
+        showMessage("countryLbl");
+        return false;
+      } else {
+        hideMessage("countryLbl");
+      }
+
+      // File input
+      let fileList = document.getElementById("file").files;
+      if (!fileList.length) {
+        showMessage("fileLbl");
+        return false;
+      } else {
+        for (i = 0; i < fileList.length; i++) {
+          let file = fileList[i];
+          if (!file || !file.name.endsWith(".html") || file.size > 4096) {
+            showMessage("fileLbl");
+            return false;
+          } else {
+            hideMessage("fileLbl");
+          }
+        }
+      }
+
+
+      return true;
+    }
+
+    function showMessage(labelId) {
+      document.getElementById(labelId).style.visibility = 'visible';
+    }
+
+    function hideMessage(labelId) {
+      document.getElementById(labelId).style.visibility = 'hidden';
+    }
+
+
+    function getElementsByQuery(query) {
+      return document.querySelectorAll(query);
+    }
+    // getElementsByQuery('input[name="subject"]:checked')
+
+  </script>
+
+</head>
+
+<body>
+
+  <h3>Validation form</h3>
+
+  <form action="form.db" method="post" onsubmit="return validate();">
+
+    <input type="hidden" name="id" />
+
+    <div class="input-container">
+      <input type="text" id="username" name="username" placeholder="Username" /> <br>
+      <label for="username" id="usernameLbl" class="validation-lbl">Username is required</label>
+    </div>
+
+    <div class="input-container">
+      <input type="password" id="password" name="password" placeholder="password" /> <br>
+      <label for="password" id="passwordLbl" class="validation-lbl">Password can be 8 to 16 characters</label>
+    </div>
+
+    <div class="input-container">
+      <label>Description</label> <br>
+      <textarea id="description" name="description"></textarea> <br>
+      <label for="description" id="descriptionLbl" class="validation-lbl">Description is required</label>
+    </div>
+
+    <div class="input-container">
+      <label>Subject</label> <br>
+      <label><input type="radio" name="subject" value="Java" />Java</label> <br>
+      <label><input type="radio" name="subject" value="C#" />C#</label> <br>
+      <label><input type="radio" name="subject" value="PHP" />PHP</label> <br>
+      <label id="subjectLbl" class="validation-lbl">Subject is required</label>
+    </div>
+
+    <div class="input-container">
+      <label>Education</label> <br>
+      <label><input type="checkbox" name="education" value="SSC" />SSC</label> <br>
+      <label><input type="checkbox" name="education" value="HSC" />HSC</label> <br>
+      <label><input type="checkbox" name="education" value="Hns" />Hns</label> <br>
+      <label><input type="checkbox" name="education" value="Ms" />Ms</label> <br>
+      <label id="educationLbl" class="validation-lbl">Please select 2 or 3 education status</label>
+    </div>
+
+    <div class="input-container">
+      <label>Country</label> <br>
+      <select id="country" name="country">
+        <option value="">Select a country</option>
+        <option value="bd">Bangladesh</option>
+        <option value="en">England</option>
+        <option value="in">India</option>
+        <option value="us">USA</option>
+        <option value="ca">Canada</option>
+      </select>
+      <br>
+      <label id="countryLbl" class="validation-lbl">Please select your country</label>
+    </div>
+
+    <div class="input-container">
+      <input type="file" id="file" name="file" multiple /> <br>
+      <label for="file" id="fileLbl" class="validation-lbl">Please select a HTML file with size less than 4kb
+        byte</label>
+    </div>
+
+
+    <div class="input-container">
+      <input type="submit" value="Submit" />
+    </div>
+
+  </form>
+
+</body>
+
+</html>

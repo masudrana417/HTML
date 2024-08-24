@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <script>
+    // function abc() {
+    //   alert("Are you sure");
+    // }
+
+    // function welcome() {
+    //   alert("Welcome");
+    // }
+
+    // Method example
+    // let obj = {
+    //   "myMethod": function () {
+    //     alert("My method executed");
+    //   }
+    // };
+
+    // obj.myMethod();
+
+    // // Function example
+    // function myFunction() {
+    //   alert("My function executed");
+    // }
+
+    // myFunction();
+
+
+    // // Function as literal
+    // let myFunctionLiteral = function () {
+    //   alert("My function literal executed");
+    // }
+
+    // myFunctionLiteral();
+
+
+    // Return statement example
+    // function returnTest(param) {
+    //   if (param == '1') {
+    //     return "1 found";
+    //   } else if (param == '2') {
+    //     return "2 found";
+    //   } else if (param == '3') {
+    //     return "3 found";
+    //   } else {
+    //     return "No match found";
+    //   }
+    // }
+
+    // input = '2'; output = "2 found";
+
+    // 'father'/'mother'/'sister'/'brother'
+
+    function changeDivText(param) {
+      let div1 = document.getElementById('div1');
+      div1.innerHTML = param;
+    }
+
+    // changeDivText("Div Text"); Won't work here as the div is not loaded yet.
+
+    // document.onload = function () {
+    //   changeDivText("Div Text"); // Will work after all the elements of the body is done
+    // }
+
+
+    function changeDivTextLater(div, text) {
+      div.innerHTML = text;
+    }
+
+
+
+
+  </script>
+</head>
+
+<body onload="changeDivText('Div Text')">
+
+  <form id="myForm" action="form.db" method="post">
+
+    <div id="div1" onmouseover="changeDivTextLater(this, 'Div changed')"
+      onmouseout="changeDivTextLater(this, 'Div Text')" style="height: 30px; background-color: red;"></div>
+
+    <!-- <div id="div1" onmouseover="document.getElementById('myForm').submit();"
+      onmouseout="changeDivTextLater(this, 'Div Text')" style="height: 30px; background-color: red;"></div> -->
+
+    <div>
+      <label>Question 1</label> <br>
+      <label>
+        <input type="radio" name="q1" value="ans1" checked />
+        Ans 1
+      </label><br>
+      <label>
+        <input type="radio" name="q1" value="ans2" />
+        Ans 2
+      </label><br>
+      <label>
+        <input type="radio" name="q1" value="ans3" />
+        Ans 3
+      </label><br>
+      <label>
+        <input type="radio" name="q1" value="ans4" />
+        Ans 4
+      </label><br>
+    </div>
+  </form>
+
+</body>
+
+</html>

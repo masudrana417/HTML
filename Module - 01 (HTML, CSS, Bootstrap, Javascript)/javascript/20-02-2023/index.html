@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <script>
+
+    // Escape sequence example
+    // let str = "{'prop1': 'Value 1'}"; // Doesn't work because JSON requires "" around property name
+    // let str1 = "{\"prop1\": \"Value 1\"}";
+    // let json = JSON.parse(str);
+    // console.log(json.prop1);
+
+    // console.log("First\t line\nSecond\tline"); // \n = new line; \t = tab
+
+    // Math functions
+    // let result = Math.min(7, 2, 3); // Smallest number
+    // console.log(result);
+    // result = Math.max(7, 2, 3); // Largest number
+    // console.log(result);
+    // result = Math.abs(-8); // Absolute value
+    // console.log(8);
+    // result = Math.round(4.8); // Rounded value
+    // console.log(result);
+    // result = Math.floor(4.8); // Floored value
+    // console.log(result);
+    // result = Math.ceil(4.8); // Ceil value
+    // console.log(result);
+    // result = Math.pow(2, 4); // Exponential value of a base
+    // console.log(result);
+
+    // String functions
+    // let str = "Test string Tst Test Tesssst Tet";
+    // console.log(str.replace('Test', "Example")); // Replaces one instance of 'Test'
+    // console.log(str.replaceAll('Test', "Example")); // Replaces all instance of 'Test'
+    // console.log(str.replace(/T[es]*st/ig, "")); // Replaces all parts of the string that match the pattern
+    // console.log(str.substring(5, 11));
+    // console.log(str.substring(5));
+    // console.log(str.substr(5, 6));
+    // console.log(str.substr(5));
+    // console.log(str.concat(" ").concat(5));
+
+    // console.log(str);
+
+    // Function as literal
+    let sum = function (num1, num2) {
+      return num1 + num2;
+    }
+
+    // Function constructor
+    // let sum = new Function("num1", "num2", "return num1 + num2");
+
+    // Example of constructor
+    // class MyClass {
+    //   constructor(){}
+    //   prop1 = "Value 1";
+    //   name(params) {
+    //     console.log(params);
+    //   }
+    // }
+
+    // var a = {
+    //   "prop1": "Value 1",
+    //   "name": function (params) {
+    //     console.log(params);
+    //   }
+    // }
+
+    // var a = new MyClass();
+
+    // Function property
+
+
+
+
+  </script>
+</head>
+
+<body>
+
+  <form id="myForm1" action="form.db" method="post">
+    <input type="text" />
+  </form>
+
+  <form id="myForm2" action="form.db" method="post">
+    <input type="text" />
+  </form>
+
+  <script>
+    // Object hierarchy example  + Built-in object
+    window.document.forms[0].elements[0].value = 'Value 1';
+
+    // User defined object 
+    var x = { a: 1, b: 3 }
+    var y = new Object();
+    y.a = 5;
+    y["b"] = 7;
+    console.log(y.a);
+    console.log(y.b);
+
+    // Built-in object property and function 
+    // Built-in object -> console
+    let heapSize = console.memory.jsHeapSizeLimit; // Built-in object property  -> memory
+    console.log(heapSize); // Built-in object function -> log()
+
+
+
+
+
+
+  </script>
+
+</body>
+
+</html>

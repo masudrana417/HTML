@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Marks</title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Student Marks</h2>
+
+<table>
+    <tr>
+        <th style="text-align: center;" rowspan="2">Name</th>
+        <th style="text-align: center;" rowspan="4">Result</th>
+        <th style="text-align: center;" colspan="2">Students</th>
+    </tr>
+    <tr>
+        <th style="text-align: center;">Class</th>
+        <th style="text-align: center;">Marks</th>
+        
+    </tr>
+    <tr>
+        <td style="text-align: center;">Tanvir</td>
+        <td style="text-align: center;">X</td>
+        <td style="text-align: center;">80</td>
+        
+    </tr>
+    <tr>
+        <td style="text-align: center;">Ayan</td>
+        <td style="text-align: center;">II</td>
+        <td style="text-align: center;">90</td>
+    </tr>
+</table>
+<h2>Student Registration Form</h2>
+
+<form>
+    <label for="id">ID:</label><br>
+    <input type="text" id="id" name="id"><br><br>
+    
+    <label for="name">Name:</label><br>
+    <textarea id="name" name="name"></textarea><br><br>
+    
+    <label for="round">Round:</label><br>
+    <select id="round" name="round">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+    </select><br><br>
+    
+    <label>Gender:</label>
+    <input type="radio" name="gender" value="male">Male
+    <input type="radio" name="gender" value="female">Female
+    <br><br>
+    
+    <label>Education:</label><br>
+    <label>SSC:</label>
+    <input type="checkbox"><br>
+    <label>HSC:</label>
+    <input type="checkbox"><br><br>
+    
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+</form>
+
+<!-- <div style="width: 30%; float: left;">
+    <a href="form.html" target="iframe_a">Open Form</a>
+</div>
+
+<div style="width: 70%; float: right;">
+    <iframe name="iframe_a" style="width: 100%; height: 400px;"></iframe>
+</div> -->
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+</head>
+
+
+<body>
+    <input type="text" id="name" placeholder="Name"><br><br>
+    <input type="text" id="contact" placeholder="contact"><br><br>
+
+    <label><b>Remarks</b></label><br>
+    <textarea id="rmk" name="rmk"> </textarea><br><br>
+
+    <level><b>SEX</b></level><br>
+    <input type="radio" name="gender" value="male" checked>Male<br>
+    <input type="radio" name="gender" value="female">Female<br><br>
+
+    <label><b>Courses</b></label>
+		<br>
+		<input type="checkbox" class="subject" name="subject" value="nt">NT
+		<br>
+		<input type="checkbox" class="subject" name="subject" value="IAD">IAD
+		<br>
+		<input type="checkbox" class="subject" name="subject" value="DDD">DDD
+		<br>
+		<input type="checkbox" class="subject" name="subject" value="ESDD">ESDD
+		<br>
+		<br><br>
+
+        <label><b>Location</b></label><br>
+        <select id="location" name="location"><br>
+            <option value="">Choose a location</option>
+            <option value="Banani">Banani</option>
+            <option value="Dhanmondi">Dhanmondi</option>
+            <option value="Mirpur">Mirpur</option>
+        </select><br><br>
+
+    <button onclick="nw()">Submit</button>
+
+
+
+
+    <script>
+        function nw(){
+
+            var n = document.getElementById('name').value;
+            if(!n) return;
+            var c = document.getElementById('contact').value;
+            if(!c) return;
+            var r = document.getElementById('rmk').value;
+            if(!r) return;
+            var g = document.querySelector('input[name="gender"]:checked').value;
+            if(!g) return;
+            var l = document.getElementById('location').value;
+            if(!l) return;
+
+            var s = [];
+			var check = document.querySelectorAll('input[name="subject"]:checked');
+			for (i = 0; i < check.length; i++) {
+					s.push(check[i].value);
+			}
+            
+			s = s.join(", ");
+            if(!s.length) return;
+
+            var ow = window.open("", "Form", "height=300px; width=500px;");
+           
+            ow.document.write(
+				"<h4>Name: </h4> <span>" + n + "</span>" +
+				"<h4>Contact: </h4> <span>" + c + "</span>" +
+				"<h4>Remark: </h4> <span>" + r + "</span>" +
+                "<h4>Gender: </h4> <span>" + g + "</span>" +
+				"<h4>Subject: </h4> <span>" + s + "</span>"+
+                "<h4>Location: </h4> <span>" + l + "</span>"
+
+				
+			);
+
+        }
+    </script>
+    
+</body>
+</html>

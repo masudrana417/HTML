@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+</head>
+
+<body>
+    <button onclick="history.back()">Previous</button> &nbsp;
+    <button onclick="history.forward()">Next</button> &nbsp;
+    <input type="number" onchange="history.go(this.value); this.value = '';"/>
+
+    <h3>Second page</h3>
+
+    <input type="button" value="First" onclick="location = 'page1.html'"> <br>
+    <input type="button" value="Third" onclick="location.replace('page3.html')"> <br>
+
+    <script>
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title>Question 12</title>
+
+</head>
+
+<body>
+
+	<form name="login_info">
+		<label><b>Login info</b></label>
+		<br><br>
+		<input type="text" id="name" placeholder="Name">
+		<br><br>
+		<input type="email" id="mail" placeholder="Email">
+		<br><br>
+		<input type="password" id="password" placeholder="Password">
+		<br><br>
+		<label><b>Gender</b></label>
+		<br><br>
+		<input type="radio" name="gender" value="male">Male
+		<br>
+		<input type="radio" name="gender" value="female">Female
+		<br>
+		<input type="radio" name="gender" value="others">Others
+		<br><br>
+		<label><b>Preference</b></label>
+		<br><br>
+		<input type="checkbox" class="subject" name="subject" value="Java">J2EE
+		<br>
+		<input type="checkbox" class="subject" name="subject" value=".Net">C#
+		<br>
+		<input type="checkbox" class="subject" name="subject" value="Networking">NT
+		<br>
+		<input type="checkbox" class="subject" name="subject" value="Graphics_design">GAVE
+		<br>
+		<input type="checkbox" class="subject" name="subject" value="Web_design">WDPF
+		<br>
+		<input type="checkbox" class="subject" name="subject" value="Database_design">DDD
+		<br><br>
+	</form>
+
+	<button onClick="nw()">Click</button>
+
+	<script>
+		function nw() {
+			var n = document.getElementById('name').value;
+			var m = document.getElementById('mail').value;
+			var p = document.getElementById('password').value;
+
+			//Value of radio button
+			var r = document.querySelector('input[name="gender"]:checked').value;
+
+			//Value of checkbox
+
+			var s = [];
+			var checkboxes = document.querySelectorAll('input[name="subject"]:checked');
+			for (i = 0; i < checkboxes.length; i++) {
+				s.push(checkboxes[i].value);
+			}
+			s = s.join(", ");
+
+			var ow = window.open("", "Form", "height=300px; width=500px;");
+
+			ow.document.write(
+				"<strong>Name: </strong> <span>" + n + "</span><br>" +
+				"<strong>Email: </strong> <span>" + m + "</span><br>" +
+				"<strong>Password: </strong> <span>" + p + "</span><br>" +
+				"<strong>Gender: </strong> <span>" + r + "</span><br>" +
+				"<strong>Subject: </strong> <span>" + s + "</span><br>"
+			);
+		}
+
+
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Text</title>
+    <meta charset="UTF-8" lang="en-US" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../bootstrap-5.0.2-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="../bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <h3>Large, medium and small device</h3>
+      <div class="row bg-row">
+        <div class="col-lg-2 col-md-4 col-sm-6 bg-col">Col LG</div>
+        <div class="col-lg-2 col-md-4 col-sm-6 bg-col">Col LG</div>
+      </div>
+      <h3>Column offset</h3>
+      <div class="row bg-row">
+        <div class="col-lg-2 col-md-4 col-sm-6 offset-lg-5 offset-md-4 offset-sm-2 bg-col">Col LG</div>
+        <div class="col-lg-2 col-md-2 col-sm-3 offset-lg-2 offset-md-2 offset-sm-1 bg-col">Col LG</div>
+      </div>
+
+      <h3>Nested columns</h3>
+      <div class="row bg-row">
+        <div class="col-lg-2 col-md-4 col-sm-6 bg-col">
+          <div class="row">
+            <div class="col-lg-2 col-md-4 col-sm-6 bg-col"></div>
+            <div class="col-lg-4 col-md-2 col-sm-3 bg-col"></div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-3 bg-col"></div>
+      </div>
+
+      <h3>Responsive image</h3>
+      <div class="row">
+        <div class="col-lg-6 col-md-9">
+          <img class="img-fluid" src="https://media.istockphoto.com/id/1301592082/photo/beautiful-meadow-field-with-fresh-grass-and-yellow-dandelion-flowers-in-nature.jpg?b=1&s=170667a&w=0&k=20&c=NQ7187Kjw4ND93c-oSw1S-U0-JGgA6KE6CxJx71Ah64="/>
+        </div>
+      </div>
+      <h3>Table</h3>
+      <div class="row">
+        <div class="col-6 table-responsive">
+          <table class="table">
+            <thead class="table-dark">
+              <tr>
+                <th>H1</th>
+                <th>H2</th>
+                <th>H3</th>
+                <th>H3</th>
+                <th>H3</th>
+                <th>H3</th>
+                <th>H3</th>
+                <th>H3</th>
+                <th>H3</th>
+                <th>H3</th>
+                <th>H3</th>
+                <th>H3</th>
+                <th>H3</th>
+                <th>H3</th>
+                <th>H3</th>
+                <th>H3</th>
+                <th>H3</th>
+                <th>H3</th>
+                <th>H3</th>
+                <th>H3</th>
+                <th>H3</th>
+                <th>H3</th>
+                <th>H3</th>
+                <th>H3</th>
+                <th>H3</th>
+                <th>H3</th>
+                <th>H3</th>
+                <th>H3</th>
+                <th>H3</th>
+                <th>H3</th>
+                <th>H3</th>
+                <th>H3</th>
+                <th>H3</th>
+                <th>H3</th>
+                <th>H3</th>
+                <th>H3</th>
+                <th>H3</th>
+                <th>H3</th>
+                <th>H3</th>
+                <th>H3</th>
+                <th>H3</th>
+                <th>H3</th>
+                <th>H3</th>
+                <th>H3</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="table-active">
+                <td>H1</td>
+                <td>H2</td>
+                <td>H3</td>
+                <td>H3</td>
+                <td>H3</td>
+                <td>H3</td>
+                <td>H3</td>
+                <td>H3</td>
+                <td>H3</td>
+                <td>H3</td>
+                <td>H3</td>
+                <td>H3</td>
+                <td>H3</td>
+                <td>H3</td>
+                <td>H3</td>
+                <td>H3</td>
+                <td>H3</td>
+                <td>H3</td>
+                <td>H3</td>
+                <td>H3</td>
+                <td>H3</td>
+                <td>H3</td>
+                <td>H3</td>
+                <td>H3</td>
+                <td>H3</td>
+                <td>H3</td>
+                <td>H3</td>
+                <td>H3</td>
+                <td>H3</td>
+                <td>H3</td>
+                <td>H3</td>
+                <td>H3</td>
+                <td>H3</td>
+                <td>H3</td>
+                <td>H3</td>
+                <td>H3</td>
+                <td>H3</td>
+                <td>H3</td>
+                <td>H3</td>
+                <td>H3</td>
+                <td>H3</td>
+                <td>H3</td>
+                <td>H3</td>
+                <td>H3</td>
+              </tr>
+            </tbody>
+            <tfoot></tfoot>
+          </table>
+        </div>
+      </div>
+
+      <h3>Form</h3>
+      <div class="row">
+        <div class="col-6">
+          <form role="form">
+            <div class="input-group mb-3">
+              <label for="username" class="form-label px-5">Username</label>
+              <input type="text" id="username" name="username" class="form-control"/>
+            </div>
+
+            <div class="input-group mb-3">
+              <label for="userid" class="form-label px-5">User ID</label>
+              <input type="text" id="userid" name="userid" class="form-control"/>
+            </div>
+
+            <div class="input-group px-5">
+              <input type="submit" value="Submit" class="btn btn-primary"/> 
+            </div>
+          </form>
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+    
+    <br/>
+    <br/>
+    <br/>
+  </body>
+</html>

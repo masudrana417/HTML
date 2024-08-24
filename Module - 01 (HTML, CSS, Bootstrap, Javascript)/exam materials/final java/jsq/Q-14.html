@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Question 14</title>
+</head>
+
+<body>	
+	
+	<h4 id="fr">Your desired fibonacci series will appear here.</h4>
+
+
+	<script>
+		
+		function fib(){
+			var n= prompt("Please specify the nth position");			
+			var arr=[0];
+			var k=1
+			for(i=0;i<n;i++){
+				arr.push(k);
+				k+=arr[i];
+			}
+			document.getElementById('fr').innerHTML= "The fibonacci series to the " + n + " position is <br>" + arr;
+		}
+	</script>
+</body>
+</html>

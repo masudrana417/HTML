@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+</head>
+
+<body>
+
+  <button onclick="location.reload()">Reload</button> &nbsp;
+  <button onclick="history.back()">Previous</button> &nbsp;
+  <button onclick="history.forward()">Next</button> &nbsp;
+  <input type="number" onchange="history.go(this.value); this.value = '';" />
+
+  <h3>Home page</h3>
+
+  <input type="button" value="First" onclick="location = 'page1.html'"> <br>
+  <input type="button" value="Second" onclick="location.href = 'page2.html'"> <br>
+  <input type="button" value="Third" onclick="location.replace('page3.html')"> <br>
+
+
+  <script>
+    console.log('host    :' + location.host); // IP or domain address of hosting machine of the webpage. Not applicable for files.
+    console.log('port    :' + location.port); // Port number of the hosting machine of the webpage. Not applicable for files or masked address.
+    console.log('hostname:' + location.hostname); // hostname = host + port
+    console.log('protocol:' + location.protocol); // Transferring protocol for the web page
+    console.log('href    :' + location.href); // URL of the web page. Can be used to go to another page from the current page
+    console.log('pathname:' + location.pathname); // pathname = "/" + path of the loaded file. Only applicable for files.
+  </script>
+
+</body>
+
+</html>

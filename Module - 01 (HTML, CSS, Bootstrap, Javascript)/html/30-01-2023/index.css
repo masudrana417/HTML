@@ -1,0 +1,68 @@
+.bgBlack {
+    color: aqua;
+    background-color: black;
+}
+
+.bgRed {
+    color: white;
+    background-color: red;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+html {
+    position: relative;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+}
+
+.item-center {
+    text-align: center;
+}
+
+table,
+td,
+th {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+td {
+    width: 50px;
+}
+
+.menu {
+    width: 20%;
+    height: 100%;
+    background-color: aqua;
+}
+
+.menu-item {
+    list-style-type: none;
+}
+
+.list-btn {
+    width: 100%;
+}
+
+.content {
+    width: 70%;
+    height: 100%;
+    background-color: chartreuse;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+}
+
+.content-iframe {
+    height: 100%;
+    width: 100%;
+}

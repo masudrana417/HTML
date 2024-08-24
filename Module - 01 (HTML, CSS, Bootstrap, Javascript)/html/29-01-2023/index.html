@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Embeded Object/Form Practice</title>
+    <meta charset="UTF-8" lang="en-US" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="bgBlack">Area and Map practice</div>
+    <div class="item-center">
+      <img src="image/area.png" usemap="#image-map" />
+
+      <map name="image-map">
+        <area
+          target="_blank"
+          title="google"
+          href="https://www.google.com"
+          coords="12,11,32,33"
+          shape="rect"
+        />
+        <area
+          target="_blank"
+          title="bing"
+          href="https://www.bing.com"
+          coords="61,23,11"
+          shape="circle"
+        />
+        <area
+          target="_blank"
+          title="Duckduckgo"
+          href="https://www.duckduckgo.com"
+          coords="22,51,12,72,32,71"
+          shape="poly"
+        />
+        <area
+          target="_blank"
+          title="Image Map"
+          href="https://www.image-map.net"
+          coords="100,11,97,19,88,20,94,24,92,33,100,30,108,34,105,26,112,20,104,19"
+          shape="poly"
+        />
+      </map>
+    </div>
+    <div class="bgBlack">Object and Param practice</div>
+    <div class="item-center">
+      <h4>Image object</h4>
+      <object data="image/area.png" type="image/png"></object>
+      <h4>Video object</h4>
+      <object data="video/movie.mp4">
+        <param name="length" value="2-min"/>
+      </object>
+    </div>
+    <div class="bgBlack">Button practice</div>
+    <div class="item-center">
+      <a href="https://www.google.com" target="_blank">
+        <button type="button">Click me</button>
+      </a>
+    </div>
+    <div class="bgBlack">Form and input practice</div>
+    <div>
+      <form action="https://jsonplaceholder.typicode.com/posts" method="get">
+
+        <label for="userId">Enter userId</label><br/>
+        <input type="text" id="userId" name="userId" /><br/>
+
+        <label for="title">Enter title</label><br/>
+        <input type="text" id="title" name="title" /><br/>
+
+        <label for="body">Enter body</label><br/>
+        <input type="text" id="body" name="body" /><br/>
+
+        <br/>
+        <button type="submit">Click me</button>
+      </form>
+        
+    </div>
+
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+
+
+  </body>
+</html>

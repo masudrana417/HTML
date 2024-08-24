@@ -1,0 +1,30 @@
+<!-- <form>
+    <input type="text" onclick="changeValue()"/><br>
+    <input type="text" onclick="changeValue()"/><br>
+</form>
+<script>
+    function changeValue(){
+        debugger;
+        document.forms[0].elements[1].value = "changed";
+    }
+</script> -->
+<form>
+    <input type="text" onchange="showMessage()" />
+</form>
+<br>
+<button onclick="downloadInNewWidow()">Download Now</button>
+<script>
+    function showMessage() {
+        let message = document.forms[0].elements[0].value;
+        var newWindow = open("", "content", "width=200, height=200");
+        newWindow.document.write("<h1>" + message + "</h1>");
+    }
+    
+    function openWebPage() {
+        var newWindow = open("https://www.google.com", "_blank", "width=400, height=400");
+    }
+
+    function downloadInNewWidow() {
+        var newWindow = open("file:///C:/IDB-R-54/javascript/25-02-2023/001.docx", "_blank", "width=400, height=400").close();
+    }
+</script>
